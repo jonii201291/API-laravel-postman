@@ -16,32 +16,18 @@ Acceso al proyecto:
     cd nombreProyecto
 
 Arrancar el servidor(la URL será  127.0.0.1:8000):
+    cd .
     php artisan serve
 
-2. Crear la API
+2. Crear la ruta para mostrarlo en el navegador:
+    En el archivo routes/web.php
+   <img width="508" height="98" alt="image" src="https://github.com/user-attachments/assets/e5cfeae1-a070-4a0b-ad55-1b0b22e8805b" />
 
-abrir en el proyecto:
-    routes/api.php
+    En el navegador http://127.0.0.1:8000
 
-Al final del archivo, pegar:
+3.  Crear la API
+    En el archivo routes/api.php
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
+    <img width="618" height="170" alt="image" src="https://github.com/user-        attachments/assets/a3e60036-dd91-4528-a12b-6d40904d8a32" />
 
-use Illuminate\Support\Facades\Route;
-
-Route::get('/hola', function () {
-    return "Hola, esta es mi primera API en Laravel";
-});
-
-3. Probar la API en el navegador http://127.0.0.1:8000/api/hola
-
-4. Cambia la ruta para provbarlo en POSTMAN:
-    Route::get('/usuarios', function () {
-        return [
-            ["nombre" => "Juan"],
-            ["nombre" => "Ana"]
-        ];
-    });
-
-5. Probar la ruta en POSTMAN. Hacer un GET con la URL http://127.0.0.1:8000/api/usuarios.
+    En el navegador http://127.0.0.1:8000/api/hola
